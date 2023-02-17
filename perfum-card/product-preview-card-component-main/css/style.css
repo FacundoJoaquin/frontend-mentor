@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: hsl(30, 38%, 92%);
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    margin-top: 30px;
+    display: flex;
+    width: 550px;
+    background-color: hsl(30, 38%, 92%);
+}
+.card img {
+    width: 50%;
+    border-radius: 10px 0 0 10px;
+}
+.card .textos {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 10px 10px 0;
+}
+
+section .textos h1 {
+    padding: 10px 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 2px;
+    margin-top: 15px;
+}
+
+section div:last-child h2{
+    font-family: 'Fraunces', serif;
+    padding: 10px 25px;
+    font-weight: 700;
+}
+section div:last-child p{
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    padding: 10px 25px;
+}
+.prices {
+    display: flex;
+    align-items: center;
+}
+.prices .price {
+    font-size: 2rem;
+    color: hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+}
+.prices .old-price {
+    position: relative;
+    right: 30px;
+    text-decoration: line-through;
+}
+form input {
+    width: 80%;
+    height: 40px;
+    position: relative;
+    top: 30px;
+    left: 10%;
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    cursor: pointer;
+}
+input:hover {
+    background-color: hsl(158, 36%, 22%);
+}
+
+@media (max-width: 375px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 90vh;
+    }
+    .card img {
+        width: 90%;
+        height: 50vh;
+        border-radius: 0 0 0 0;
+        object-fit: cover;
+        object-position: 0 30%;
+    }
+    .textos{
+        width: 90%;
+        border-radius: 0 0 0 0;
+    }
+    .textos h2 br:first-child {
+        display: none;
+    }
+    form input {
+        position: relative;
+        top: -10px;
+        margin: 10px 0;
+    }
+    .attribution {
+        display: none;
+    }
+}
